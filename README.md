@@ -7,6 +7,14 @@ API REST desarrollada con Spring Boot y MongoDB para gestionar franquicias, sucu
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) instalado y en ejecución.
 - Opcional: Java 17 y Maven si deseas compilar manualmente.
 
+## Demo en la nube
+
+La aplicación también está desplegada en Render y se puede probar en línea:
+
+```
+https://franquisias-api.onrender.com/swagger-ui/index.html
+```
+
 ## Cómo levantar la aplicación con Docker
 
 Desde la raíz del proyecto, ejecuta:
