@@ -1,0 +1,25 @@
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: franquisias-mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: franquisiasdb
+    volumes:
+      - mongo-data:/data/db
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: franquisias-api
+    ports:
+      - "8080:8080"
+    environment:
+      MONGO_URI: mongodb://mongodb:27017/franquisiasdb
+    depends_on:
+      - mongodb
+
+volumes:
+  mongo-data:
